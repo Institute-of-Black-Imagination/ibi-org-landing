@@ -611,6 +611,10 @@ video {
   width: 170px;
 }
 
+.w-\[344px\] {
+  width: 344px;
+}
+
 .max-w-\[400px\] {
   max-width: 400px;
 }
@@ -641,6 +645,10 @@ video {
 
 .max-w-\[325px\] {
   max-width: 325px;
+}
+
+.max-w-\[344px\] {
+  max-width: 344px;
 }
 
 .flex-wrap {
