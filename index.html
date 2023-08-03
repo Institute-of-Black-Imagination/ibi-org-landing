@@ -1,0 +1,108 @@
+<!-- Mobile-compatible HTML boilerplate with all meta tags -->
+<html>
+  <head>
+    <!-- Basic meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Institute of Black Imagination</title>
+    <meta name="description" content="The Institute of Black Imagination is a global collaborative helping the black and brown creative class to ascend through visionary education, policy, practice, and funding mechanics–inspiring a new world of limitless possibilities.">
+    <meta name="author" content="The Institute of Black Imagination">
+    <!-- Facebook meta tags -->
+    <meta property="og:url" content="https://blackimagination.org">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Institute of Black Imagination">
+    <meta property="og:description" content="The Institute of Black Imagination is a global collaborative helping the black and brown creative class to ascend through visionary education, policy, practice, and funding mechanics–inspiring a new world of limitless possibilities.">
+    <meta property="og:image" content="https://blackimagination.org/assets/og-image.jpg">
+    <!-- Twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@instituteofblackimagination">
+    <meta name="twitter:creator" content="@instituteofblackimagination">
+    <meta name="twitter:title" content="The Institute of Black Imagination">
+    <meta name="twitter:description" content="The Institute of Black Imagination is a global collaborative helping the black and brown creative class to ascend through visionary education, policy, practice, and funding mechanics–inspiring a new world of limitless possibilities.">
+    <meta name="twitter:image" content="https://blackimagination.org/assets/og-image.jpg">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="stylesheet" href="dist/base.css">
+  </head>
+  <body class="w-full py-6 px-3">
+    <main class="min-h-full w-full">
+      <!-- Logo -->
+      <div id="logo" class="w-full h-full flex justify-center items-center">
+        <h1 class="text-[transparent]">
+          <img class="w-[170px]" src="/assets/logo.png" alt="Institute of Black Imagination">
+        </h1>
+      </div>
+      <section class="-mt-4 mb-4">
+        <div id="coming-soon-container" class="text-center">
+          <p id="coming-soon" class="mb-[4px]">Coming soon.</p>
+          <div id="countdown" class="text-[0.8em] flex justify-center gap-2">
+            <!-- Change all the divs in the countdown class element to spans -->
+            <span class="countdown-item mono">
+              <span class="countdown-value" id="days">00</span>
+              <span class="countdown-label">DAYS</span>
+            </span>
+            <span class="countdown-item mono">
+              <span class="countdown-value" id="hours">00</span>
+              <span class="countdown-label">HOURS</span>
+            </span>
+            <span class="countdown-item mono">
+              <span class="countdown-value" id="minutes">00</span>
+              <span class="countdown-label">MINUTES</span>
+            </span>
+            <span class="countdown-item mono">
+              <span class="countdown-value" id="seconds">00</span>
+              <span class="countdown-label">SECONDS</span>
+            </span>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="pb-6">
+        <p class="max-w-[325px] mx-auto mt-4">The Institute of Black Imagination is a global collaborative helping the black and brown creative class to ascend through visionary education, policy, practice, and funding mechanics–inspiring a new world of limitless possibilities.</p>
+        <!-- <p class="mt-2">
+          <a class="underline" href="https://blackimagination.us10.list-manage.com/subscribe?u=90d5dc5f42cd1c9f5488707dc&id=75786592ae" target="_blank">Sign up for updates</a>
+        </p> -->
+      </section>
+    </main>
+  </body>
+  <script>
+    // Make the countdown timer work
+    // Set the date we're counting down to September 18, 2023 00:00:00
+    var countDownDate = new Date("Sep 18, 2023 00:00:00").getTime();
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+      // Get today's date and time
+      var now = new Date().getTime();
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      if (days < 10) {
+        days = "0" + days;
+      }
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      if (hours < 10) {
+        hours = "0" + hours;
+      }
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      if (seconds < 10) {
+        seconds = "0" + seconds;
+      }
+      // Display the result in the element with id="countdown"
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("minutes").innerHTML = minutes;
+      document.getElementById("seconds").innerHTML = seconds;
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+</html>

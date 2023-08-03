@@ -1,0 +1,70 @@
+* {
+  /* reset font */
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+}
+
+html {
+  font-family: 'NB-Akademie-Regular',  sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+  background: black;
+  color: white;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+.mono {
+  font-family: 'NB-Akademie-Mono',  sans-serif;
+  letter-spacing: -0.1em;
+}
+
+/* import font from file */
+@font-face {
+  font-family: 'NB-Akademie-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/NB-Akademie-Regular.woff) format('woff')
+}
+
+/* import font from file */
+@font-face {
+  font-family: 'NB-Akademie-Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/NB-Akademie-Mono-400.woff) format('woff')
+}
+
+/* Animate logo to fade in after 0.5 seconds */
+#logo {
+  opacity: 0;
+  animation: fadeIn 1s ease-in 0.5s forwards;
+}
+#coming-soon-container {
+  opacity: 0;
+  animation: fadeIn 1s ease-in 2s forwards;
+}
+/* #countdown {
+  opacity: 0;
+  animation: fadeIn 1s ease-in 2.5s forwards;
+} */
+#about {
+  opacity: 0;
+  animation: fadeIn 1s ease-in 3.5s forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
